@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import CoinMarginDropdown from "./components/CoinMarginDropdown";
+import Table from "./components/Table";
 
-function App() {
-  return (
-    <div className="App">
+class App extends Component {
+  state = {
+    data: {}
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:5000/api/data')
+      .then(response => response.json())
+      .then(data => this.setState({ data }));
+  }
+
+  render() {
+    const { data } = this.state;
+
+    return (
+      <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Kucoin Margin Coins</h1>
+        <CoinMarginDropdown />
+        <Table />
       </header>
-    </div>
-  );
+      </div>
+    );
+  }
 }
 
 export default App;
