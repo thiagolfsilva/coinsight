@@ -26,8 +26,7 @@ class App extends Component {
             <Routes>
               <Route path="/" element={
                 <div>
-                  <h1>Kucoin Margin Coins</h1>
-                  <CoinMarginDropdown />
+                  <h1>Kucoin Lending Rates</h1>
                   <Table />
                 </div>
               } />

@@ -9,7 +9,7 @@ const CoinMarginDropdown = ({ onSelect }) => {
     const fetchMarginCoins = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/kcs/margin/currencies"
+          `${process.env.REACT_APP_API_URL}/api/kucoin/margin/currencies`
         );
         const data = response.data;
         console.log(data);

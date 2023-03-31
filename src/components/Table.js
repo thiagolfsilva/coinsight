@@ -9,7 +9,7 @@ const Table = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('http://localhost:5000/api/kcs/margin/current');
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/kucoin/margin/current`);
       const data = await response.json();
       setMarginalRates(data);
     };
@@ -47,7 +47,7 @@ const Table = () => {
     <>
       <table className="table">
         <caption>
-          Developers currently enrolled in this course, column headers are sortable.
+          Using the marginal rate for a $2000 borrow
         </caption>
         <TableHead columns={columns} handleSorting={handleSorting} />
         {marginalRates.length > 0 ? (

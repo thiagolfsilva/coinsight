@@ -10,7 +10,7 @@ const InterestRateChart = ({ data }) => {
   const fetchInterestRateData = async () => {
     try {
       
-        const response = await axios.get('http://localhost:5000/api/interest-rates');
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/interest-rates`);
       const interestRateData = response.data;
 
       const timestamps = interestRateData.map((data) => data.timestamp);

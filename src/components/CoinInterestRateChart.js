@@ -12,7 +12,7 @@ const CoinInterestRateChart = () => {
     const fetchInterestRateData = async (coin) => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/interest-rates?coin=${coin}`
+          `${process.env.REACT_APP_API_URL}/api/interest-rates?coin=${coin}`
         );
         const data = response.data;
         setInterestRateData(data);
