@@ -6,16 +6,13 @@ import CoinMarginDropdown from './components/CoinMarginDropdown';
 import CoinInterestRateChart from './components/CoinInterestRateChart';
 import Table from './components/Table';
 import InterestRateChart from './components/InterestRateChart';
+import CustomNavbar from './components/CustomNavbar';
+import RateConverter from './components/tools/RateConverter';
+import LeverageRatio from './components/tools/LeverageRatio';
 
 class App extends Component {
   state = {
     data: {}
-  }
-
-  componentDidMount() {
-    fetch('http://localhost:5000/api/data')
-      .then(response => response.json())
-      .then(data => this.setState({ data }));
   }
 
   render() {
@@ -25,16 +22,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <header className="App-header">
-            <nav>
-              <ul>
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
-                <li>
-                  <Link to="/interestrates">Interest Rates</Link>
-                </li>
-              </ul>
-            </nav>
+            <CustomNavbar />
             <Routes>
               <Route path="/" element={
                 <div>
@@ -44,6 +32,8 @@ class App extends Component {
                 </div>
               } />
               <Route path="/interestrates" element={<CoinInterestRateChart />} />
+              <Route path="/tools/rateconverter" element={<RateConverter />} />
+              <Route path="/tools/leverageratio" element={<LeverageRatio />} />
             </Routes>
           </header>
         </div>
