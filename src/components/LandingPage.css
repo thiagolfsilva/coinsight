@@ -1,0 +1,53 @@
+.landing-page {
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    text-align: center;
+    /*background-image: url('path/to/your/background-image.jpg');*/
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    color: #fff;
+  }
+  
+  .header h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .header h2 {
+    font-size: 24px;
+    font-weight: normal;
+  }
+  
+  .section-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  .section {
+    flex: 1;
+    max-width: 22%;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  .section h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .section img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+  }
+  
+  .section p {
+    font-size: 14px;
+  }
+  

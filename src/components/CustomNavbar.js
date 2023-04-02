@@ -6,20 +6,22 @@ const CustomNavbar = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Navbar.Brand as={Link} to="/">
-        My App
+        Coinsight
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link as={Link} to="/">
-            Home
-          </Nav.Link>
-          <Nav.Link as={Link} to="/interestrates">
-            Interest Rates
-          </Nav.Link>
           <Nav.Link as={Link} to="/telegram">
             Telegram Bot
           </Nav.Link>
+          <NavDropdown title="Kucoin Rates" id="basic-nav-dropdown">
+            <NavDropdown.Item as={Link} to="/kucoin/currentrates">
+              Current Rates
+            </NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/kucoin/historicalrates">
+              Historical Rates
+            </NavDropdown.Item>
+          </NavDropdown>
           <NavDropdown title="Tools" id="basic-nav-dropdown">
             <NavDropdown.Item as={Link} to="/tools/rateconverter">
               Rate Converter
@@ -29,6 +31,9 @@ const CustomNavbar = () => {
             </NavDropdown.Item>
           </NavDropdown>
         </Nav>
+        <Nav.Link href="https://apex-6.gitbook.io/coinsight" target="_blank">
+          Learn
+        </Nav.Link>
       </Navbar.Collapse>
     </Navbar>
   )

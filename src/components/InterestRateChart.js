@@ -1,31 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import Chart from 'react-apexcharts';
 
-const InterestRateChart = ({ data }) => {
-  const [series, setSeries] = useState([{ data: [] }]); // Add this line to define series state and setSeries function
+const InterestRateChart = ({ data, threshold, coin }) => {
   const [timestamps, setTimestamps] = useState([]);
   const [aprs, setAprs] = useState([]);
 
-  const fetchInterestRateData = async () => {
-    try {
-      
-        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/interest-rates`);
-      const interestRateData = response.data;
-
-      const timestamps = interestRateData.map((data) => data.timestamp);
-      const aprs = interestRateData.map((data) => data.apr);
-
-      setTimestamps(timestamps);
-      setAprs(aprs);
-    } catch (error) {
-      console.error('Error fetching interest rate data:', error);
-    }
-  };
-
-  useEffect(() => {
-    fetchInterestRateData();
-  }, []);
+  const maxApr = Math.max(...aprs.filter((apr) => apr != null), 0);
+  const ymax = maxApr * 1.2;
 
   const chartOptions = {
     chart: {
@@ -37,7 +18,10 @@ const InterestRateChart = ({ data }) => {
     },
     yaxis: {
       min: 0,
-      max: 10,
+      max: ymax,
+      labels: {
+        formatter: (value) => `${value.toFixed(2)}%`,
+      },
     },
     title: {
       text: 'Interest Rate Line Chart',
@@ -52,22 +36,31 @@ const InterestRateChart = ({ data }) => {
   ];
 
   useEffect(() => {
-    // Update the series data when the input data changes
-    setSeries([{ data: data.map((item) => [item.timestamp, item.apr]) }]);
+    // Update the timestamps and aprs states when the input data changes
+    const timestamps = data.map((item) => item.timestamp);
+    const aprs = data.map((item) => item.apr);
+
+    setTimestamps(timestamps);
+    setAprs(aprs);
   }, [data]);
 
   return (
     <div>
-      <h1>Interest Rate Chart</h1>
-      <Chart
-        options={chartOptions}
-        series={chartSeries}
-        type="line"
-        width="100%"
-        height="400"
-      />
+      <h1>Kucoin P2P Rates - {threshold} {coin}</h1>
+      {timestamps.length > 0 ? (
+        <Chart
+          options={chartOptions}
+          series={chartSeries}
+          type="line"
+          width="100%"
+          height="400"
+        />
+      ) : (
+        <p>Loading...</p>
+      )}
+      <p>An interest rate of 0% means there were no availabe loans, or the data harvesting failed for that period</p>
     </div>
   );
-}
+};
 
 export default InterestRateChart;
