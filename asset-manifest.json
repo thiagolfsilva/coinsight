@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/coinsight/static/css/main.d55da44e.css",
-    "main.js": "/coinsight/static/js/main.bc3105f0.js",
+    "main.js": "/coinsight/static/js/main.1dad2f07.js",
     "static/js/787.28cb0dcd.chunk.js": "/coinsight/static/js/787.28cb0dcd.chunk.js",
     "static/media/learning_icon.png": "/coinsight/static/media/learning_icon.fdc89f11799b09602528.png",
     "static/media/dataviz_icon.png": "/coinsight/static/media/dataviz_icon.79be0b5b71b55b950ab4.png",
     "static/media/notification_icon.png": "/coinsight/static/media/notification_icon.73d32d99a059896f2d0a.png",
     "index.html": "/coinsight/index.html",
     "main.d55da44e.css.map": "/coinsight/static/css/main.d55da44e.css.map",
-    "main.bc3105f0.js.map": "/coinsight/static/js/main.bc3105f0.js.map",
+    "main.1dad2f07.js.map": "/coinsight/static/js/main.1dad2f07.js.map",
     "787.28cb0dcd.chunk.js.map": "/coinsight/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d55da44e.css",
-    "static/js/main.bc3105f0.js"
+    "static/js/main.1dad2f07.js"
   ]
 }
