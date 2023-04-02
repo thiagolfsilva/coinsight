@@ -17,6 +17,9 @@ const CustomNavbar = () => {
           <Nav.Link as={Link} to="/interestrates">
             Interest Rates
           </Nav.Link>
+          <Nav.Link as={Link} to="/telegram">
+            Telegram Bot
+          </Nav.Link>
           <NavDropdown title="Tools" id="basic-nav-dropdown">
             <NavDropdown.Item as={Link} to="/tools/rateconverter">
               Rate Converter

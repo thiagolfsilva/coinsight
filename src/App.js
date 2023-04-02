@@ -9,6 +9,7 @@ import InterestRateChart from './components/InterestRateChart';
 import CustomNavbar from './components/CustomNavbar';
 import RateConverter from './components/tools/RateConverter';
 import LeverageRatio from './components/tools/LeverageRatio';
+import TelegramBotPage from './components/TelegramBotPage';
 
 class App extends Component {
   state = {
@@ -31,6 +32,7 @@ class App extends Component {
                 </div>
               } />
               <Route path="/interestrates" element={<CoinInterestRateChart />} />
+              <Route path="/telegram" element={<TelegramBotPage />} />
               <Route path="/tools/rateconverter" element={<RateConverter />} />
               <Route path="/tools/leverageratio" element={<LeverageRatio />} />
             </Routes>
