@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/cp-react/static/css/main.d4723c43.css",
-    "main.js": "/cp-react/static/js/main.b722cf4f.js",
-    "static/js/787.28cb0dcd.chunk.js": "/cp-react/static/js/787.28cb0dcd.chunk.js",
-    "index.html": "/cp-react/index.html",
-    "main.d4723c43.css.map": "/cp-react/static/css/main.d4723c43.css.map",
-    "main.b722cf4f.js.map": "/cp-react/static/js/main.b722cf4f.js.map",
-    "787.28cb0dcd.chunk.js.map": "/cp-react/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/coinsight/static/css/main.d4723c43.css",
+    "main.js": "/coinsight/static/js/main.a241829c.js",
+    "static/js/787.28cb0dcd.chunk.js": "/coinsight/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/coinsight/index.html",
+    "main.d4723c43.css.map": "/coinsight/static/css/main.d4723c43.css.map",
+    "main.a241829c.js.map": "/coinsight/static/js/main.a241829c.js.map",
+    "787.28cb0dcd.chunk.js.map": "/coinsight/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d4723c43.css",
-    "static/js/main.b722cf4f.js"
+    "static/js/main.a241829c.js"
   ]
 }
