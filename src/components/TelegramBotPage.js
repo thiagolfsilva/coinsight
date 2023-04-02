@@ -3,7 +3,7 @@ import QRCode from 'qrcode.react';
 import './TelegramBotPage.css';
 
 const TelegramBotPage = () => {
-  const telegramBotUsername = '@coinsightbot';
+  const telegramBotUsername = 'coinsightbot';
 
   const handleClick = () => {
     window.open(`https://t.me/${telegramBotUsername}`, '_blank');
