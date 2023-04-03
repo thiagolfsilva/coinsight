@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Current live on [Github Pages](https://github.com/thiagolfsilva/coinsight)
+Current live on [Github Pages](https://thiagolfsilva.github.io/coinsight)
 
 ## Available Scripts
 
